@@ -1,0 +1,61 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "User 1",
+      "status": 2
+    }
+  ],
+  "ticket": [
+    {
+      "id": 1,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus ligula quis sapien ullamcorper viverra.",
+      "assignee": 1,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "id": 2,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus ligula quis sapien ullamcorper viverra.",
+      "assignee": 1,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "id": 3,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus ligula quis sapien ullamcorper viverra.",
+      "assignee": 1,
+      "type": 1,
+      "status": 1
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "Task",
+      "friendlyName": "Task"
+    },
+    {
+      "id": 2,
+      "name": "Bug",
+      "friendlyName": "Bug"
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "name": "Completed",
+      "friendlyName": "Completed"
+    },
+    {
+      "id": 2,
+      "name": "InProgress",
+      "friendlyName": "In Progress"
+    },
+    {
+      "id": 3,
+      "name": "NotStarted",
+      "friendlyName": "Not Started"
+    }
+  ]
+}

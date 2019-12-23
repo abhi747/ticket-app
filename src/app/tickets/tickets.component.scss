@@ -1,0 +1,51 @@
+.user-content {
+    margin-left: 75px;
+
+    > h5 {
+        padding-bottom: 8px;
+        border-bottom: 1px solid #000;
+        padding-left: 5px;
+        margin-bottom: 15px;
+    }
+}
+
+.fa-circle{
+    font-size: 10px;
+}
+.completed{
+    color: green;
+}
+.inprogress{
+    color: blue;
+}
+.notstarted{
+    color: red;
+}
+u{
+    // color: blue;
+    cursor: pointer !important;
+    font-weight: 700;
+}
+.options{
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    border-radius: 7%;
+}
+table.user-table{
+ 
+    width: 100%;
+
+    tr{
+        border-bottom:1pt solid black;
+
+        td.bullet {
+            padding: 0 5px 0 10px;
+        }
+
+        .status-dropdown {
+            padding: 5px 5px 5px 0;
+        }
+    }
+}
+

@@ -1,0 +1,49 @@
+<div class="container-fluid col-lg-12">
+	<div class="px-1 my-2 record-row user-content">
+		<h5><i class="fa fa-user mr-3" [ngClass]="{'text-success': userStatus === 'Completed',
+			'text-primary': userStatus === 'Inprogress',
+			'text-danger': userStatus === 'NotStarted'}">
+			</i>User 1
+		</h5>
+		<div class="container-fluid col-lg-11">
+			<div class="row pb-4" *ngIf="tickets">
+
+				<div class="col-md text-center" *ngFor='let ct of filter'>
+				
+					<u [ngStyle]="{'color': hideTickets === 'true' ? 'blue' : 'blue'}" (click)="filterTickets(ct.id)">{{ct.type}} </u>({{getCount(ct.id)}})
+				</div>
+			</div>
+			<div>
+				<div *ngIf="!hideTickets">
+					<table class="user-table">
+						<tbody>
+							<tr *ngFor="let ticket of filteredTickets; let i = index">
+								<td class="bullet">
+									<span>
+										<i class="fas fa-circle" [ngClass]="{'text-success':  ticket.status == 1,
+															'text-primary': ticket.status == 2,
+															'text-danger': ticket.status == 3}"></i>
+									</span>
+								</td>
+								<td class="description">
+									{{ (ticket && ticket.description) ? ticket.description : '' }}</td>
+								<td class="status-dropdown">
+									<select *ngIf="ticket" class="form-control text-white" [value]="ticket.status" #status (change)="changeStatus(status.value, ticket.id)"
+									 [ngClass]="{'bg-success':  ticket.status == 1,
+													   'bg-primary': ticket.status == 2,
+													   'bg-danger': ticket.status == 3}">
+										<option class="options" *ngFor='let st of responseDataStatus' [value]='st.id'>
+											{{st.friendlyName}}
+										</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
